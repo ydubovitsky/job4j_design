@@ -1,4 +1,4 @@
-package ru.job4j.iterator.backDirectionIterator;
+package ru.job4j.iterator.backdirectioniterator;
 
 import java.util.logging.Logger;
 
@@ -16,13 +16,13 @@ public class BackDirectionIteratorImpl implements BackDirectionIterator {
 
     @Override
     public boolean hasPrevious() {
-        LOGGER.info(String.format("Current iterator position - %s" , currentIteratorPosition));
+        LOGGER.info(String.format("Current iterator position - %s", currentIteratorPosition));
         return currentIteratorPosition > 0;
     }
 
     @Override
     public int previous() {
-        if(hasPrevious()) {
+        if (hasPrevious()) {
             this.currentIteratorPosition = this.currentIteratorPosition - 1; //FIXME Redundant?
             return data[this.currentIteratorPosition];
         }

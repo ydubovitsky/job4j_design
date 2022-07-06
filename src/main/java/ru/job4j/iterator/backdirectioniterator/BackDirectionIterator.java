@@ -1,4 +1,4 @@
-package ru.job4j.iterator.backDirectionIterator;
+package ru.job4j.iterator.backdirectioniterator;
 
 public interface BackDirectionIterator {
 

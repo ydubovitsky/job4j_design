@@ -1,4 +1,4 @@
-package ru.job4j.iterator.backDirectionIterator;
+package ru.job4j.iterator.backdirectioniterator;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,15 +10,15 @@ import static org.junit.Assert.assertThat;
 
 public class BackDirectionIteratorImplTest {
 
-    private static final int startRange = 0;
-    private static final int endRange = 10;
+    private static final int START_RANGE = 0;
+    private static final int END_RANGE = 10;
 
     private BackDirectionIterator iterator;
 
     @Before
     public void init() {
         iterator = new BackDirectionIteratorImpl(
-                IntStream.range(startRange, endRange).toArray()
+                IntStream.range(START_RANGE, END_RANGE).toArray()
         );
     }
 
@@ -46,7 +46,7 @@ public class BackDirectionIteratorImplTest {
     //!TODO Make refactoring!
     @Test(expected = NoPreviousElementInArrayException.class)
     public void testIndexOutOfBoundsException() {
-        for (int i = startRange; i < endRange + 1; i++) {
+        for (int i = START_RANGE; i < END_RANGE + 1; i++) {
             iterator.previous();
         }
     }
