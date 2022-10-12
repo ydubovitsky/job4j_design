@@ -1,7 +1,5 @@
 package ru.job4j.assertj.assertionswithprimitivetypes;
-
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BoxTest {
@@ -62,7 +60,7 @@ class BoxTest {
 
     @Test
     void whenGetAreaIsZero() {
-        Box box = new Box(123,123);
+        Box box = new Box(123, 123);
         double area = box.getArea();
         assertThat(area)
                 .isNotNaN()
@@ -78,15 +76,6 @@ class BoxTest {
                 .isEqualTo(6);
     }
 
-    @Test
-    void whenGetAreaIsThree() {
-        Box box = new Box(4, 5);
-        double area = box.getArea();
-        assertThat(area)
-                .isNotNaN()
-                .isPositive()
-                .isEqualTo(6);
-    }
 
     @Test
     void whenGetAreaMoreThanSquareOfEdge() {
